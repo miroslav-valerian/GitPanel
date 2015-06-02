@@ -13,19 +13,21 @@
 	],
 	"support": {
 		"email": "info@miroslav-valerian.cz",
-		"issues": "https://github.com/miroslav-valerian/Git/issues"
+		"issues": "https://github.com/miroslav-valerian/GitPanel/issues"
 	},
+	"version": "v0.1.0-dev",
 	"require": {
 		"php": ">=5.3.1",
-		"ext-curl": "*"
+		"nette/nette": "~2.0",
+		"valerian/git": "*"
 	},
 	"require-dev": {
 		"php": ">=5.3.1",
-		"ext-curl": "*"
+		"valerian/git": "*"
 	},
 	"autoload": {
-		"psr-0": {
-			"Valerian\\Git": "src/"
+		"psr-4": {
+			"Valerian\\": "src/"
 		}
 	}
 }
