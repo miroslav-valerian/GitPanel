@@ -1,0 +1,41 @@
+{*
+ * Template for GitPanel.
+ * 
+ * @author Ing. Miroslav Valerián
+ * @copyright (c) Ing. Miroslav Valerián 2015
+ * @license MIT
+ * @package GitPanel
+ *}
+
+<h1>GitPanel: {$currentBranch}</h1>
+<div class="tracy-inner">
+	<div>
+		<b>Posledních 5 logů</b><br />
+        {if $logs}
+			{foreach $logs as $log}
+				<table>
+                	<thead>
+                	    <tr>
+                		    <th>Datum</th>
+                            <th>Autor</th>
+                            <th>Commit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>{$log['date']->format("d.m.Y H:i")}</b></td>
+                            <td><b>{$log['author']['name']}</b> ({$log['author']['email']})</td>
+                            <td>{$log['commit']}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><i>Poznámka: {$log['note']}</i></td>
+                        </tr>
+                    </tbody>
+                </table><br />
+			{/foreach}
+		{/if}
+    </div>
+    <div>
+        <b>GIT Path</b> : {$gitPath}
+    </div>
+</div>
