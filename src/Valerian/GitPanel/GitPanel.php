@@ -55,6 +55,7 @@ class GitPanel extends Control implements IBarPanel
 		$template->branches = $branches;
         $template->remoteBranches = $remoteBranches;
 		$template->gitPath = $this->gitPath;
+        $template->logHistory = $this->logHistory;
         $template->render();
         return ob_get_clean();
     }
