@@ -4,8 +4,13 @@ Git Panel
 Panel for Tracy debug panel.
 Shows current branch and git log.
 
-Installing
-----------
+Requirements
+============
+- Git wrapper requires PHP 5.3.2 or higher and git.
+- Valerian\Git
+
+Installation
+=============
 
 Install library via composer:
 
@@ -13,6 +18,8 @@ Install library via composer:
 composer require Valerian/GitPanel
 ```
 
+Getting Started
+===============
 Register panel
 
 ```
